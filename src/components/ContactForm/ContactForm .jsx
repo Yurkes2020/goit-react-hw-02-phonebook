@@ -1,7 +1,12 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Form, FormLabel } from './ContactForm.styled';
 
 export class ContactForm extends Component {
+  static propTypes = {
+    onFormSubmit: PropTypes.func.isRequired,
+  };
+
   state = {
     name: '',
     number: '',
